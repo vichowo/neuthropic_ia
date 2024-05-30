@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuthopic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+        }
+        h1, h2, h3, h4, h5, p, button, input {
+            font-family: 'Rubik', sans-serif;
+        }
+    </style>
+    <!-- Agregar Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyD_iB_zgg5sD94ZAnd5VnmnHgnuIHnJ_hU",
+        authDomain: "neuthropic.firebaseapp.com",
+        databaseURL: "https://neuthropic.firebaseio.com",
+        projectId: "neuthropic",
+        storageBucket: "neuthropic.appspot.com",
+        messagingSenderId: "154580413365",
+        appId: "1:154580413365:web:9c32065f7bc4faa62247fc",
+        measurementId: "G-44WS1J0YPZ"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar" id="sidebar">
+            <div class="user-info">
+                <img src="user_image.png" alt="Usuario">
+                <p>Ignacio Niño</p>
+            </div>
+            <button class="menu-button" onclick="window.location.href='https://capable-cobbler-1c01d7.netlify.app'">Panel</button>
+            <button class="menu-button">Actividades</button>
+            <button class="menu-button">Tráfico</button>
+            <button class="menu-button">Burbujas</button>
+            <button class="menu-button">Notas</button>
+            <button class="menu-button">IA en directo</button>
+            <div class="chat">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Mensajes del chat se agregarán aquí -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+                    <button id="send-message-btn">Enviar</button>
+                </div>
+            </div>
+            <button id="add-bubble-btn">Agrega una burbuja</button>
+        </div>
+        <div class="content" id="content">
+            <button class="toggle-btn" id="toggle-btn">&#9776;</button>
+            <div class="toolbar">
+                <button>T</button>
+                <button><span>&#9998;</span></button>
+                <button id="add-bubble">+</button>
+                <button>&#x21bb;</button>
+                <button>&#x21ba;</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
